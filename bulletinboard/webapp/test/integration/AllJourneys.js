@@ -7,7 +7,7 @@ sap.ui.define([
 
 	Opa5.extendConfig({
 		arrangements: new Startup(),
-		viewNamespace: "testingtutorialsapui5.view.",
+		viewNamespace: "bulletinboard.view.",
 		autoWait: true
 	});
 });

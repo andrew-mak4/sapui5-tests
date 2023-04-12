@@ -1,14 +1,11 @@
-<mvc:View
-controllerName="testingtutorialsapui5.controller.Worklist"
+<mvc:View controllerName="bulletinboard.controller.Worklist"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic">
-	<semantic:FullscreenPage
-		id="page"
+	<semantic:FullscreenPage id="page"
 		title="{i18n>worklistViewTitle}">
 		<semantic:content>
-			<Table
-				id="table"
+			<Table id="table"
 				width="auto"
 				class="sapUiResponsiveMargin"
 				items="{
@@ -22,41 +19,46 @@ controllerName="testingtutorialsapui5.controller.Worklist"
 				updateFinished=".onUpdateFinished">
 				<headerToolbar>
 					<Toolbar>
-						<Label id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<Label id="tableHeader"
+							text="{worklistView>/worklistTableTitle}"/>
 					</Toolbar>
 				</headerToolbar>
 				<columns>
-					<Column width="33%" id="nameColumn">
-						<Text text="{i18n>TableNameColumnTitle}" id="nameColumnTitle"/>
+					<Column width="33%"
+						id="nameColumn">
+						<Text text="{i18n>TableNameColumnTitle}"
+							id="nameColumnTitle"/>
 					</Column>
-					<Column width="33%" id="categoryColumn">
-						<Text text="{i18n>TableCategoryColumnTitle}" id="categoryColumnTitle"/>
+					<Column width="33%"
+						id="categoryColumn">
+						<Text text="{i18n>TableCategoryColumnTitle}"
+							id="categoryColumnTitle"/>
 					</Column>
-					<Column width="33%" id="unitNumberColumn" hAlign="End">
-						<Text text="{i18n>TableUnitNumberColumnTitle}" id="unitNumberColumnTitle"/>
+					<Column width="33%"
+						id="unitNumberColumn"
+						hAlign="End">
+						<Text text="{i18n>TableUnitNumberColumnTitle}"
+							id="unitNumberColumnTitle"/>
 					</Column>
 				</columns>
 				<items>
 					<ColumnListItem vAlign="Middle">
 						<cells>
-							<ObjectIdentifier
-								title="{Title}"/>
-							<Text
-								text="{Category}"/>
-							<ObjectNumber
-								number="{
+							<ObjectIdentifier title="{Title}"/>
+							<Text text="{Category}"/>
+							<ObjectNumber number="{
 									path: 'Price',
 									formatter: '.formatter.numberUnit'
 								}"
-								unit="{Currency}"
-								/>
+								unit="{Currency}" />
 						</cells>
 					</ColumnListItem>
 				</items>
 			</Table>
 		</semantic:content>
 		<semantic:sendEmailAction>
-			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+			<semantic:SendEmailAction id="shareEmail"
+				press=".onShareEmailPress"/>
 		</semantic:sendEmailAction>
 	</semantic:FullscreenPage>
 </mvc:View>

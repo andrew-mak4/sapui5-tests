@@ -1,5 +1,5 @@
 sap.ui.define([
-	"testingtutorialsapui5/localService/mockserver",
+	"bulletinboard/localService/mockserver",
 	"sap/m/MessageBox"
 ], function (mockserver, MessageBox) {
 	"use strict";

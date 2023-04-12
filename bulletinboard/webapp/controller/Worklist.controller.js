@@ -3,10 +3,10 @@ sap.ui.define([
 	'sap/ui/model/json/JSONModel',
 	'../model/formatter',
 	'sap/m/library'
-], function(BaseController, JSONModel, formatter, mobileLibrary) {
+], function (BaseController, JSONModel, formatter, mobileLibrary) {
 	"use strict";
 
-	return BaseController.extend("testingtutorialsapui5.controller.Worklist", {
+	return BaseController.extend("bulletinboard.controller.Worklist", {
 
 		formatter: formatter,
 

@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"testingtutorialsapui5/model/formatter"
+	"bulletinboard/model/formatter"
 ], function (formatter) {
 	"use strict";
 

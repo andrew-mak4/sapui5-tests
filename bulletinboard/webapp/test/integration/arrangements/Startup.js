@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/test/Opa5",
-	"testingtutorialsapui5/localService/mockserver",
+	"bulletinboard/localService/mockserver",
 	"sap/ui/model/odata/v2/ODataModel"
-], function(Opa5, mockserver, ODataModel) {
+], function (Opa5, mockserver, ODataModel) {
 	"use strict";
 
-	return Opa5.extend("testingtutorialsapui5.test.integration.arrangements.Startup", {
+	return Opa5.extend("bulletinboard.test.integration.arrangements.Startup", {
 
 		iStartMyApp: function (oOptionsParameter) {
 			var oOptions = oOptionsParameter || {};
@@ -22,7 +22,7 @@ sap.ui.define([
 			// start the app UI component
 			this.iStartMyUIComponent({
 				componentConfig: {
-					name: "testingtutorialsapui5",
+					name: "bulletinboard",
 					async: true
 				},
 				hash: oOptions.hash,
