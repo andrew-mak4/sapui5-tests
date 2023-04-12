@@ -5,7 +5,7 @@ sap.ui.define([
 ], function (UIComponent, ResourceModel, models) {
 	"use strict";
 
-	return UIComponent.extend("sap.ui.demo.bulletinboard.Component", {
+	return UIComponent.extend("testingtutorialsapui5.Component", {
 
 		metadata: {
 			manifest: "json"

@@ -1,6 +1,6 @@
 /*global QUnit*/
 sap.ui.define([
-	"sap/ui/demo/bulletinboard/model/models",
+	"testingtutorialsapui5/model/models",
 	"sap/ui/Device"
 ], function (models, Device) {
 	"use strict";

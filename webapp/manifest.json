@@ -1,7 +1,7 @@
 {
 	"_version": "1.21.0",
 	"sap.app": {
-		"id": "sap.ui.demo.bulletinboard",
+		"id": "testingtutorialsapui5",
 		"type": "application",
 		"i18n": {
 			"bundleUrl": "i18n/i18n.properties",
@@ -40,7 +40,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sap.ui.demo.bulletinboard.view.App",
+			"viewName": "testingtutorialsapui5.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "app"
@@ -57,7 +57,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "sap.ui.demo.bulletinboard.i18n.i18n",
+					"bundleName": "testingtutorialsapui5.i18n.i18n",
 					"supportedLocales": [
 						""
 					],
@@ -78,7 +78,7 @@
 				"routerClass": "sap.m.routing.Router",
 				"type": "View",
 				"viewType": "XML",
-				"path": "sap.ui.demo.bulletinboard.view",
+				"path": "testingtutorialsapui5.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"async": true

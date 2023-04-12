@@ -4,7 +4,7 @@ sap.ui.define([
 ], function (BaseController, JSONModel) {
 	"use strict";
 
-	return BaseController.extend("sap.ui.demo.bulletinboard.controller.App", {
+	return BaseController.extend("testingtutorialsapui5.controller.App", {
 
 		onInit: function () {
 			var oViewModel = new JSONModel({

@@ -6,7 +6,7 @@ sap.ui.define([
 ], function(BaseController, JSONModel, formatter, mobileLibrary) {
 	"use strict";
 
-	return BaseController.extend("sap.ui.demo.bulletinboard.controller.Worklist", {
+	return BaseController.extend("testingtutorialsapui5.controller.Worklist", {
 
 		formatter: formatter,
 

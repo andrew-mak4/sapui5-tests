@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="sap.ui.demo.bulletinboard.controller.Worklist"
+controllerName="testingtutorialsapui5.controller.Worklist"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:semantic="sap.m.semantic">

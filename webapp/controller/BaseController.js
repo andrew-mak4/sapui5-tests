@@ -5,7 +5,7 @@ sap.ui.define([
 ], function(Controller, History, UIComponent) {
 	"use strict";
 
-	return Controller.extend("sap.ui.demo.bulletinboard.controller.BaseController", {
+	return Controller.extend("testingtutorialsapui5.controller.BaseController", {
 
 		/**
 		 * Convenience method for accessing the event bus.
