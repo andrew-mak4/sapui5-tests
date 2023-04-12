@@ -27,6 +27,9 @@ sap.ui.define([
 
 			// create the views based on the url/hash
 			this.getRouter().initialize();
+
+			// allow saving values to the OData model
+			this.getModel().setDefaultBindingMode("TwoWay");
 		}
 
 	});
