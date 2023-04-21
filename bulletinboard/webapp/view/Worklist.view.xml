@@ -7,6 +7,7 @@
 		<semantic:content>
 			<Table id="table"
 				width="auto"
+				growing="true"
 				class="sapUiResponsiveMargin"
 				items="{
 					path: '/Posts',
