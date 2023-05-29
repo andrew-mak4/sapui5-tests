@@ -2,9 +2,14 @@ sap.ui.define([
 	'sap/ui/test/Opa5',
 	'sap/ui/test/matchers/AggregationLengthEquals',
 	'sap/ui/test/matchers/I18NText',
+	'sap/ui/test/matchers/BindingPath',
 	'sap/ui/test/actions/Press'
 ],
-	function (Opa5, AggregationLengthEquals, I18NText, Press) {
+	function (Opa5,
+		AggregationLengthEquals,
+		I18NText,
+		BindingPath,
+		Press) {
 		"use strict";
 
 		var sViewName = "Worklist",
@@ -21,6 +26,18 @@ sap.ui.define([
 							viewName: sViewName,
 							actions: new Press(),
 							errorMessage: "The table does not have a trigger."
+						});
+					},
+
+					iPressOnTheItemWithTheID: function (sId) {
+						return this.waitFor({
+							controlType: "sap.m.ColumnListItem",
+							viewName: sViewName,
+							matchers: new BindingPath({
+								path: "/Posts('" + sId + "')"
+							}),
+							actions: new Press(),
+							errorMessage: "No list item with the id " + sId + " was found."
 						});
 					}
 				},
@@ -71,6 +88,17 @@ sap.ui.define([
 								Opa5.assert.ok(true, "The table header has 23 items");
 							},
 							errorMessage: "The table header does not contain the number of items: 23"
+						});
+					},
+
+					iShouldSeeTheTable: function () {
+						return this.waitFor({
+							id: sTableId,
+							viewName: sViewName,
+							success: function () {
+								Opa5.assert.ok(true, "The table is visible");
+							},
+							errorMessage: "Was not able to see the table."
 						});
 					}
 				}
