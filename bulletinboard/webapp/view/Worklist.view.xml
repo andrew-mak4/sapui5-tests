@@ -22,6 +22,10 @@
 					<Toolbar>
 						<Label id="tableHeader"
 							text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer />
+						<SearchField id="searchField"
+							width="auto"
+							search=".onFilterPosts" />
 					</Toolbar>
 				</headerToolbar>
 				<columns>

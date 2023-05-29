@@ -3,12 +3,14 @@ sap.ui.define([
 	'sap/ui/model/json/JSONModel',
 	'../model/formatter',
 	'bulletinboard/model/FlaggedType',
-	'sap/m/library'
+	'sap/m/library',
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
 ], function (BaseController,
 	JSONModel,
 	formatter,
 	FlaggedType,
-	mobileLibrary) {
+	mobileLibrary, Filter, FilterOperator) {
 	"use strict";
 
 	return BaseController.extend("bulletinboard.controller.Worklist", {
@@ -124,7 +126,21 @@ sap.ui.define([
 				// The source is the list item that got pressed
 				postId: oEvent.getSource().getBindingContext().getProperty("PostID")
 			});
+		},
 
+		onFilterPosts: function (oEvent) {
+
+			// build filter array
+			var aFilter = [];
+			var sQuery = oEvent.getParameter("query");
+			if (sQuery) {
+				aFilter.push(new Filter("Title", FilterOperator.Contains, sQuery));
+			}
+
+			// filter binding
+			var oTable = this.byId("table");
+			var oBinding = oTable.getBinding("items");
+			oBinding.filter(aFilter);
 		},
 	});
 });

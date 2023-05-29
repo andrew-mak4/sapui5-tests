@@ -3,13 +3,15 @@ sap.ui.define([
 	'sap/ui/test/matchers/AggregationLengthEquals',
 	'sap/ui/test/matchers/I18NText',
 	'sap/ui/test/matchers/BindingPath',
-	'sap/ui/test/actions/Press'
+	'sap/ui/test/actions/Press',
+	'sap/ui/test/actions/EnterText'
 ],
 	function (Opa5,
 		AggregationLengthEquals,
 		I18NText,
 		BindingPath,
-		Press) {
+		Press,
+		EnterText) {
 		"use strict";
 
 		var sViewName = "Worklist",
@@ -38,6 +40,16 @@ sap.ui.define([
 							}),
 							actions: new Press(),
 							errorMessage: "No list item with the id " + sId + " was found."
+						});
+					},
+					iSearchFor: function (sSearchString) {
+						return this.waitFor({
+							id: "searchField",
+							viewName: sViewName,
+							actions: new EnterText({
+								text: sSearchString
+							}),
+							errorMessage: "SearchField was not found."
 						});
 					}
 				},
@@ -100,7 +112,21 @@ sap.ui.define([
 							},
 							errorMessage: "Was not able to see the table."
 						});
-					}
+					},
+					theTableHasOneItem: function () {
+						return this.waitFor({
+							id: sTableId,
+							viewName: sViewName,
+							matchers: new AggregationLengthEquals({
+								name: "items",
+								length: 1
+							}),
+							success: function () {
+								Opa5.assert.ok(true, "The table contains one corresponding entry");
+							},
+							errorMessage: "The table does not contain one item."
+						});
+					},
 				}
 			}
 		});
