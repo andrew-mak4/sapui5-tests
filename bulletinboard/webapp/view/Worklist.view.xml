@@ -48,7 +48,7 @@
 
 				</columns>
 				<items>
-					<ColumnListItem vAlign="Middle">
+					<ColumnListItem vAlign="Middle" type="Navigation" press=".onPress">
 						<cells>
 							<ObjectIdentifier title="{Title}"/>
 							<Text text="{Category}"/>
